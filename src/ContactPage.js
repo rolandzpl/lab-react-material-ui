@@ -1,14 +1,19 @@
-import { Button, Stack, TextareaAutosize } from "@mui/material";
+import { Button, Stack, TextareaAutosize, Typography } from "@mui/material";
 import TextField from "@mui/material/TextField";
 import { styled } from "@mui/material/styles";
 import React from "react";
-import { padding } from "@mui/system";
+import { Box, padding } from "@mui/system";
 import Container from "@mui/material/Container";
 
 const ContactForm = () => {
   let [email, setEmail] = React.useState(null);
   return (
     <Container maxWidth="sm" noValidate>
+      <Box>
+        <Typography variant="subtitle1">
+          Please fill the form below to send a message...
+        </Typography>
+      </Box>
       <form>
         <Stack spacing={3}>
           <TextField

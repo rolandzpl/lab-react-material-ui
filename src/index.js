@@ -3,10 +3,19 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import BlogService from "./services/blogService";
+import GalleryService from "./services/galleryService";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App
+      settings={{
+        galleryService: new GalleryService(100),
+        blogService: new BlogService("bronekfotoblog"),
+        instagramUrl: "https://www.instagram.com/bronekfoto/",
+        facebookUrl: "https://www.facebook.com/bbronekfoto",
+      }}
+    />
   </React.StrictMode>,
   document.getElementById("root")
 );
